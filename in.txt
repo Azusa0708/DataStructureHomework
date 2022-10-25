@@ -1,0 +1,4 @@
+This is the first file,
+solve the problem pls.
+And func dir stores the functionfile(.cpp),
+the head dir stores the headfile(.h).

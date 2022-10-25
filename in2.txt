@@ -1,0 +1,5 @@
+This is the second file,
+U can use this to test the read function.
+And pls repair these function:
+find substitute change.
+And now the program can run in ur vscode directly.
