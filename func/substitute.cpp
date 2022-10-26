@@ -1,14 +1,19 @@
 #include "../head/AllLine.h"
+#include<string>
 
 bool AllLine::substitute(int subLineNum)
 {
-    std::string t;
-    char t0;
-    while ((t0 = getchar()) != '\n')
+    try
     {
-        t.push_back(t0);
+        go(subLineNum);
+        std::string subStr;
+        int temp = getchar();
+        std::getline(std::cin,subStr);
+        setEachLine(subStr);
+        return true;
     }
-    go(subLineNum);
-    nowLine->eachLine = t;
-    return true;
+    catch(...)
+    {
+        return false;
+    }
 }
