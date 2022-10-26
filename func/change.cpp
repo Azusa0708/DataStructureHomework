@@ -1,11 +1,12 @@
 #include "../head/AllLine.h"
 
-bool AllLine::change(std::string changestr, std::string changedstr)
+bool AllLine::change(std::string changeStr, std::string changedStr)
 {
-	std::string theStringNow = changestr; // theStringNow �տ�ʼʱ�ڵ�������
 	try
 	{
-		theStringNow.replace(theStringNow.find(changestr), changedstr.length(), changedstr);
+		std::string theStringNow;
+		theStringNow = getEachLine();
+		theStringNow.replace(theStringNow.find(changeStr),changeStr.length(),changedStr);
 		setEachLine(theStringNow);
 		return true;
 	}
