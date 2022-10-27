@@ -112,6 +112,13 @@ int main()
             int subLineNum;
             std::cout << " Substitute what line number? ";
             std::cin >> subLineNum;
+            if (std::cin.fail())
+            {
+                std::cout << "Input error, reload the command pls" << std::endl;
+                std::cin.clear();
+                std::cin.ignore(2048, '\n');
+                break;
+            }
             isOPSuccess = allLine->substitute(subLineNum);
             getchar();
         }
