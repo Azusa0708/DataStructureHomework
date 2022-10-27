@@ -14,7 +14,7 @@ int main()
     {
         bool isOPSuccess = true;
         allLine->meau();
-        std::cout << "&&";
+        std::cout << "\n&&";
         std::string str;
         std::getline(std::cin, str);
         command = str[0];
@@ -31,6 +31,8 @@ int main()
             std::cout << "What new text segment do U want to add in. ";
             std::getline(std::cin, changedStr);
             isOPSuccess = allLine->change(changeStr, changedStr);
+            if (!isOPSuccess)
+                std::cout << "String was not found." << std::endl;
         }
         break;
         case 'd':
@@ -111,6 +113,7 @@ int main()
             std::cout << " Substitute what line number? ";
             std::cin >> subLineNum;
             isOPSuccess = allLine->substitute(subLineNum);
+            getchar();
         }
         break;
         case 'v':
@@ -131,7 +134,7 @@ int main()
             break;
         }
         if (!isOPSuccess)
-            std::cout << "\nCommand execution error" << std::endl;
+            std::cout << "Command execution error" << std::endl;
     }
     if (allLine->quit(outPath))
     {

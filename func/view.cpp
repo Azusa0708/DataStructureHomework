@@ -4,8 +4,6 @@ void AllLine::view()
 {
 	if (isEmpty())
 	{
-		std::cout << "File buffer is empty(please use command r to read file to buffer)."
-				  << "\n";
 		return;
 	}
 	else

@@ -2,5 +2,8 @@
 
 std::string AllLine::getEachLine()
 {
-	return nowLine->eachLine;
+	if (!nowLine->eachLine.empty())
+		return nowLine->eachLine;
+	else
+		return "";
 }

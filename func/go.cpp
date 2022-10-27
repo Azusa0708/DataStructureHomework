@@ -4,7 +4,7 @@ bool AllLine::go(int rowToGo)
 {
 	if (rowToGo > LineNum || rowToGo < 0)
 	{
-		std::cout << " Warning: No such line"
+		std::cout << "Warning: No such line"
 				  << "\n";
 		return false;
 	}

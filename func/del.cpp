@@ -4,18 +4,21 @@ bool AllLine::del()
 {
 	try
 	{
+		if (LineNum == -1)
+			return false;
 		if (LineNum == 0) //ɾ������
 		{
-			LineNum--;
+			nowLine = NULL;
+			firstLine = NULL;
+			lastLine = NULL;
 			nowLineNum = -1;
-			delete (nowLine);
-			std::cout << "File buffer is empty(please use command r to read file to buffer)."
-					  << "\n";
+			LineNum = -1;
 		}
 		else if (nowLineNum == LineNum) //ɾ�����һ���ڵ�
 		{
 			LineNum--;
 			nowLine = lastLine->priorLine;
+			nowLine->nextLine = NULL;
 			delete (lastLine);
 			lastLine = nowLine;
 			nowLineNum--;

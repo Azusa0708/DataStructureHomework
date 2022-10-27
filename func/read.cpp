@@ -14,7 +14,7 @@ bool AllLine::read(std::string fileInPath)
         firstLine = nowLine = lastLine = new EachLine;
         std::getline(fin, t0);
         firstLine->eachLine = t0;
-        nowLine++;
+        nowLineNum++;
         LineNum++;
     }
     while (std::getline(fin, t0))

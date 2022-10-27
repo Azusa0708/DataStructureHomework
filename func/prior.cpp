@@ -6,7 +6,14 @@ bool AllLine::prior()
 	{
 		if (isEmpty())
 		{
-			std::cout << "File buffer is empty(please use command r to read file to buffer)." << "\n";
+			std::cout << "File buffer is empty(please use command r to read file to buffer)."
+					  << "\n";
+			return false;
+		}
+		if (nowLineNum == 0)
+		{
+			std::cout << " Warning: at start of buffer"
+					  << "\n";
 			return false;
 		}
 		nowLineNum--;
@@ -14,10 +21,9 @@ bool AllLine::prior()
 	}
 	catch (...)
 	{
-		std::cout << " Warning: at start of buffer" << "\n";
-		std::cout << nowLineNum << " : " << getEachLine() << "\n";
+		std::cout << " Warning: can't go to prior buffer"
+				  << "\n";
 		return false;
 	}
-	std::cout << nowLineNum << " : " << getEachLine() << "\n";
 	return true;
 }
