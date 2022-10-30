@@ -120,7 +120,6 @@ int main()
                 break;
             }
             isOPSuccess = allLine->substitute(subLineNum);
-            getchar();
         }
         break;
         case 'v':

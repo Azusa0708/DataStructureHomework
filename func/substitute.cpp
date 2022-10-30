@@ -9,6 +9,7 @@ bool AllLine::substitute(int subLineNum)
             return false;
         std::string subStr;
         int temp = getchar();
+        std::cout << "What text do U want to replace: ";
         std::getline(std::cin, subStr);
         setEachLine(subStr);
         return true;
